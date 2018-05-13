@@ -22,7 +22,7 @@ public class Client {
     }
 
     public static void main(String[] args) throws IOException {
-       Socket client = new Socket("127.0.0.1", 8888);
+       Socket client = new Socket("127.0.0.1", 8080);
 
         PrintStream output = new PrintStream(client.getOutputStream());
         new Thread(new Message(client)).start();
